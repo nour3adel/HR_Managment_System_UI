@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LeaveRequest.cs" />
+    <Compile Update="Forms\UserLeaveRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logic\Department\" />
+    <Folder Include="Logic\PerformanceReview\" />
+    <Folder Include="Logic\Payroll\" />
+  </ItemGroup>
+
+</Project>
